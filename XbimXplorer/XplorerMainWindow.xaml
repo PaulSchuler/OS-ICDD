@@ -166,6 +166,7 @@
                 -->
             </MenuItem>
             <MenuItem Header="_About" Click="About_Click"/>
+            <MenuItem Header="_Test" Click="Test_Click"/>
         </Menu>
 
         <avalonDock:DockingManager Grid.Row="1" x:Name="DockingManager">
@@ -212,7 +213,7 @@
                                    Height="Auto" 
 
                                    MouseDoubleClick="SpatialControl_MouseDoubleClick"
-                                   WcsAdjusted="{x:Static local:App.ContextWcsAdjustment}"
+                                   WcsAdjusted="{x:Static local:App.ContextWcsAdjustment}" Loaded="DrawingControl_Loaded"
                                    >
                                 <xbim:DrawingControl3D.Background>
                                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">

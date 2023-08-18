@@ -171,7 +171,7 @@ namespace XbimXplorer.Dialogs
         {
             using (var c =  new Xbim.Presentation.WaitCursor())
             {
-                AssembliesText.Text = AssembliesInfo;
+                //AssembliesText.Text = AssembliesInfo;
             }
         }
     }

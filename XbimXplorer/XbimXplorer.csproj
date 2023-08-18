@@ -45,6 +45,7 @@
 		<Resource Include="**\*.png" />
 	</ItemGroup>
 	<ItemGroup>
+		<None Remove="Dialogs\TestWindow.xaml" />
 		<None Remove="xBIM.ico" />
 	</ItemGroup>
 	<ItemGroup>
@@ -75,8 +76,14 @@
 	</ItemGroup>
 	<ItemGroup>
 		<Folder Include="Properties\" />
+		<Folder Include="TestForm\" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Xbim.Presentation\Xbim.Presentation.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Compile Update="Dialogs\TestWindow.xaml.cs">
+	    <DependentUpon>TestWindow.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 </Project>

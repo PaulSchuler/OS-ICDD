@@ -1223,5 +1223,26 @@ namespace XbimXplorer
             
             
         }
-	}
+
+		private void MenuItem_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void DrawingControl_Loaded(object sender, RoutedEventArgs e)
+		{
+
+        }
+
+		private void Test_Click(object sender, RoutedEventArgs e)
+		{
+            var w = new TestWindow
+            {
+                Model = Model,
+                Assemblies = _pluginAssemblies,
+                MainWindow = this
+            };
+            w.Show();
+        }
+    }
 }
