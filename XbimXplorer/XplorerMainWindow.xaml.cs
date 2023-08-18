@@ -1239,7 +1239,7 @@ namespace XbimXplorer
             var w = new TestWindow
             {
                 Model = Model,
-                Assemblies = _pluginAssemblies,
+                Selection = DrawingControl.SelectedEntity,
                 MainWindow = this
             };
             w.Show();

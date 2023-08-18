@@ -166,7 +166,9 @@
                 -->
             </MenuItem>
             <MenuItem Header="_About" Click="About_Click"/>
-            <MenuItem Header="_Test" Click="Test_Click"/>
+            <MenuItem Header="_Test">
+                <MenuItem Header="RDF" Click="Test_Click"/>
+            </MenuItem>
         </Menu>
 
         <avalonDock:DockingManager Grid.Row="1" x:Name="DockingManager">

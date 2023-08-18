@@ -3,4 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="TestWindow" Height="340" Width="571" ResizeMode="NoResize" WindowStartupLocation="CenterOwner"
         MouseLeftButtonDown="UserControl_MouseLeftButtonDown" Icon="pack://siteoforigin:,,,/xBIM.ico"
-        />
+        >
+
+    <Grid>
+        <TextBox Padding="0,0,30,0" FontSize="16" Margin="166,36,125,143" x:Name="textbox1" TextWrapping="Wrap" AcceptsReturn="True"/>
+        <Button Width="81" HorizontalAlignment="Right" Margin="0,52,426,228" Click="Button_Click_1"/>
+    </Grid>
+</Window>
