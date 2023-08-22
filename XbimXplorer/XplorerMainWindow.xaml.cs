@@ -48,6 +48,8 @@ using Xbim.IO;
 using Xbim.Geometry.Engine.Interop;
 using System.Windows.Media;
 
+
+
 #endregion
 
 namespace XbimXplorer
@@ -75,14 +77,18 @@ namespace XbimXplorer
 
         private string _openedModelFileName;
 
+        public IPersistEntity Selection { get; set; }
+
         protected Microsoft.Extensions.Logging.ILogger Logger { get; private set; }
 
         public static ILoggerFactory LoggerFactory { get; private set; }
+
 
         public ILoggerFactory GetLoggerFactory()
 		{
             return LoggerFactory;
 		}
+
 
 
         /// <summary>
@@ -170,7 +176,6 @@ namespace XbimXplorer
             LoggedEvents = new ObservableCollection<EventViewModel>();
             // any logging event required should happen after XplorerMainWindow_Loaded
         }
-
 
         public Visibility DeveloperVisible => Settings.Default.DeveloperMode 
             ? Visibility.Visible 
@@ -326,7 +331,7 @@ namespace XbimXplorer
                     foreach (var modelReference in model.ReferencedModels)
                     {
                         // creates federation geometry contexts if needed
-                        Debug.WriteLine(modelReference.Name);
+                        //Debug.WriteLine(modelReference.Name);
                         if (modelReference.Model == null)
                             continue;
                         if (!modelReference.Model.GeometryStore.IsEmpty)
@@ -1239,10 +1244,10 @@ namespace XbimXplorer
             var w = new TestWindow
             {
                 Model = Model,
-                Selection = DrawingControl.SelectedEntity,
                 MainWindow = this
             };
             w.Show();
         }
+
     }
 }

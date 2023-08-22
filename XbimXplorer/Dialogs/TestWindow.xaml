@@ -1,12 +1,14 @@
-﻿<Window x:Class="XbimXplorer.Dialogs.TestWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Custom="http://schemas.Xbim.com/Presentation" x:Class="XbimXplorer.Dialogs.TestWindow"
         Title="TestWindow" Height="340" Width="571" ResizeMode="NoResize" WindowStartupLocation="CenterOwner"
         MouseLeftButtonDown="UserControl_MouseLeftButtonDown" Icon="pack://siteoforigin:,,,/xBIM.ico"
         >
 
     <Grid>
-        <TextBox Padding="0,0,30,0" FontSize="16" Margin="166,36,125,143" x:Name="textbox1" TextWrapping="Wrap" AcceptsReturn="True"/>
-        <Button Width="81" HorizontalAlignment="Right" Margin="0,52,426,228" Click="Button_Click_1"/>
+        <TextBox Padding="0,0,30,0" FontSize="12" Margin="10,40,0,0" x:Name="textbox1" TextWrapping="Wrap" AcceptsReturn="True" HorizontalAlignment="Left" Width="190" VerticalAlignment="Top" Height="140"/>
+        <Button Content="Take Objekt 1" HorizontalAlignment="Left" Margin="10,10,0,0" Click="Button_Click_1" Width="80" Height="25" VerticalAlignment="Top"/>
+        <Image x:Name="IFCImage1" Height="112" Margin="10,187,0,0" Width="190" HorizontalAlignment="Left" VerticalAlignment="Top"/>
     </Grid>
 </Window>
